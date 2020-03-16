@@ -1,0 +1,37 @@
+package exercicios_2;
+
+import java.util.Scanner;
+
+public class Exercicio11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String nomes[] = new String[10];
+		String pesquisa;
+		
+		Scanner in = new Scanner(System.in);
+		
+		for(int pessoa=0; pessoa<=9; pessoa++) {
+			System.out.print("\nDigite o nome da "+ (pessoa+1) + "� pessoa: ");
+			nomes[pessoa] = in.next();
+			in.nextLine();
+		}
+		
+		System.out.print("\n\nDigite um nome para pesquisar: ");
+		pesquisa = in.next();
+		in.nextLine();
+		
+		int aux=0;
+		while( aux <= 9) {
+			if( pesquisa.equalsIgnoreCase(nomes[aux]) ) {
+				System.out.println("O nome "+ pesquisa +" est� na posi��o "+ aux +" do vetor");
+				break;
+			}
+			aux++;
+		}
+		
+		in.close();
+	}
+
+}
